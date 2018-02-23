@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 
 int compare(int a,int b, int c);
@@ -21,8 +20,11 @@ int compare(int a,int b, int c)
           return 3;
     }
 
+     else
+{
+return 4;
 }
-
+}
 int main()
 {
     int a,b,c;
@@ -35,15 +37,18 @@ case 1:
      printf("The greatest number is %d\n",a);
      break;
 case 2:
-     printf("The greatest number is %d\n",b);
+         printf("The greatest number is %d\n",b);
      break;
 case 3:
        printf("The greatest number is %d\n",c);
        break;
-  }
+case 4:
+printf("Error\n");
 
-
-
+break;
+}
     return 0;
 
 }
+
+
