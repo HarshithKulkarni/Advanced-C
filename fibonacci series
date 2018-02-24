@@ -1,0 +1,36 @@
+#include<stdio.h>
+int compute();
+int input()
+{
+    int n;
+    printf("Enter the number of terms\n");
+    scanf("%d",&n);
+    printf("The first %d fibonacci terms are\n",n);
+    return n;
+}
+int compute()
+{
+    int n;
+  n=input();
+  int a,b,c;
+  int i;
+
+    a=0;
+    b=1;
+    printf("%d,%d,",a,b);
+    for(i=1;i<n-1;i++)
+    {
+        c=a+b;
+        printf("%d,",c);
+        a=b;
+        b=c;
+    }
+    printf("\n");
+    return 0;
+}
+int main()
+{
+    int callcompute;
+    callcompute=compute();
+    return callcompute;
+}
