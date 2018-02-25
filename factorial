@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int input()
+{
+    int n;
+   printf("Enter the value\n");
+   scanf("%d",&n);
+   return n;
+}
+int  calc()
+{
+    int c,n,fact=1;
+    n=input();
+    for(c=1;c<=n;c++)
+    {
+        fact=fact*c;
+    }
+    return fact;
+}
+int main()
+{
+     int fact=calc();
+    printf("The factorial is %d\t",fact);
+
+   return 0;
+}
