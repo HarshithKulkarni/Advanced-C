@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int elements();
+int elementsnum()
+{
+    int n;
+    printf("Enter the number of elements in the array\n");
+    scanf("%d",&n);
+    return n;
+}
+
+int elements(int *array)
+{
+    int c,n;
+    n=elementsnum();
+    printf("Enter %d elements\n",n);
+    for(c=0;c<n;c++)
+    {
+        scanf("%d",&array[c]);
+    }
+     return n;
+}
+int search(int *search, int  *array,int *ind)
+{
+    int c,n;
+    n=elements(array);
+    printf("Enter the number to be searched \n");
+    scanf("%d",search);
+    for(c=0;c<n;c++)
+    {
+        if(array[c]==*search)
+        {
+            break;
+        }
+
+    }
+    if(c==n)
+    {
+
+        return 0;
+    }
+    *ind=c;
+    return 1;
+}
+int main()
+{
+    int x,c,s, a[100];
+    x=search(&s, a,&c);
+    switch(x)
+    {
+    case 1:
+        printf("%d is present at %d",s,c+1);
+        break;
+    case 0:
+        printf("%d is not found in the array",s);
+        break;
+    }
+  return 0;
+}
