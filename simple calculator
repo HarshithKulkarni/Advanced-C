@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int selectinput()
+{
+    int n;
+    printf("Please select the operation\n");
+    scanf("%d",&n);
+    return n;
+}
+int opinputa()
+{
+    int a;
+    printf("Enter first number\n");
+    scanf("%d",&a);
+    return a;
+}
+int opinputb()
+{
+    int b;
+    printf("Enter second number\n");
+    scanf("%d",&b);
+    return b;
+}
+
+int compute(int n)
+{
+    int sum,sub,pro,div,a,b;
+    if(n==1)
+    {
+        int sum;
+        int a=opinputa();
+        int b=opinputb();
+        sum=a+b;
+        return sum;
+    }
+  if(n==2)
+    {
+        int sub;
+    }
+  if(n==3)
+    {
+        int pro;
+        int a=opinputa();
+        int b=opinputb();
+        pro=a*b;
+        return pro;
+    }
+  if(n==4)
+    {
+        int div;
+        int a=opinputa();
+        int b=opinputb();
+        div=a/b;
+        return div;
+    }
+}
+int main()
+{
+    int n;
+    printf("Press 1 for addition\n");
+    printf("Press 2 for subtraction\n");
+    printf("Press 3 for Multiplication\n");
+    printf("Press 4 for Division\n");
+    n=selectinput();
+    int res = 0;
+    res = compute(n);
+    switch(n)
+    {
+    case 1:
+        printf("The sum is %d\n",res);
+        break;
+    case 2:
+        printf("The sub is %d\n",res);
+        break;
+    case 3:
+        printf("The product is %d\n",res);
+        break;
+    case 4:
+        printf("The division value is %d\n",res);
+        break;
+    }
+}
+
+
