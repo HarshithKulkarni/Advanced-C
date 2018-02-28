@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int compute();
+int input()
+{
+    int n;
+     printf("Enter the number untill where the prime numbers are to be printed\n");
+     scanf("%d",&n);
+     return n;
+}
+int compute()
+{
+    int n;
+    int j,k;
+    int i;
+    n=input();
+    for(i=1;i<=n;i++)
+    {
+        k=0;
+        for(j=1;j<=n;j++)
+        {
+            if(i%j==0)
+                k++;
+        }
+    if(k==2)
+    printf("%d\t",i);
+    }
+}
+int main()
+{
+
+   compute();
+   printf("\n");
+   return 0;
+}
+
+
