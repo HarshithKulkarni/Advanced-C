@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+int input(int n)
+{
+    printf("Enter the Student marks\n");
+    scanf("%d",&n);
+    return(n);
+}
+int calc(int n)
+{
+        if(n<=100 && n>90)
+        printf("Result A+\n");
+        else
+        if(n<=90 && n>80)
+        printf("Result A\n");
+        else
+        if(n<=80 && n>70)
+        printf("Result B\n");
+        else
+        if(n<=70 && n>60)
+        printf("Result C\n");
+        else
+        if(n<=60 && n>50)
+        printf("Result D\n");
+        else if(n<=50 && n>40)
+        printf("Result E\n");
+        else if(n<40)
+        printf("FAIL\n");
+}
+
+int main()
+{
+    int n,k;
+    n=input(n);
+    k=calc(n);
+}
