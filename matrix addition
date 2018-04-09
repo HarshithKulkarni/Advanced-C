@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+void display(int sum[10][10], int c,int d)
+{
+        int i,j;
+        for(i=0;i<c;i++)
+        {
+                for(j=0;j<d;j++)
+                {
+                        printf("%d\t",sum[i][j]);
+                }
+                printf("\n");
+        }
+}
+int add(int a[10][10],int b[10][10],int c,int d)
+{
+        int sum[10][10],i,j;
+        if(c==d)
+        {
+        for(i=0;i<c;i++)
+        {
+                for(j=0;j<d;j++)
+                {
+                        sum[i][j]=a[i][j]+b[i][j];
+                }
+        }
+        }
+        else
+        printf("The matrices cannot be added\n");
+        display(sum,c,d);
+}
+
+int main()
+{
+        int i,j,r,c,firmat[10][10],secmat[10][10];
+        printf("Enter row and coloumn size\n");
+        scanf("%d%d",&r,&c);
+        printf("Enter the elements of first matrix\n");
+        for(i=0;i<r;i++)
+                {
+                for(j=0;j<c;j++)
+                {
+                        scanf("%d",&firmat[i][j]);
+                }
+        }
+        printf("Enter the elements of second matrix\n");
+        for(i=0;i<r;i++)
+        {
+                for(j=0;j<c;j++)
+                {
+                        scanf("%d",&secmat[i][j]);
+                }
+        }
+        add(firmat,secmat,r,c);
+}
