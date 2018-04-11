@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+        char a[50],b[50],c[50];
+        printf("Enter your name\n");
+        scanf("%s",a);
+        printf("Your name is %s\n",a);
+        strcpy(b,a);
+        printf("The copied value is %s\n",b);
+        printf("The length of your name is %ld\n",strlen(a));
+        printf("Enter another name\n");
+        scanf("%s",c);
+        printf("The concatination of two names is %s\n",strcat(a,c));
+}
+
+
