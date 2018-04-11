@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+        int i;
+        printf("Enter the number of students\n");
+        scanf("%d",&i);
+        struct student
+        {
+                char name[15];
+                char roll[20];
+                char dept[20];
+                int marks;
+                char grade[2];
+        }n[i];
+        while(i!=0)
+        {
+                printf("Enter the name of the student\n");
+                scanf("%s",n[i].name);
+                printf("Enter student's roll number\n");
+                scanf("%s",n[i].roll);
+                printf("Enter the department of the student\n");
+                scanf("%s",n[i].dept);
+                printf("Enter the marks of the student\n");
+                scanf("%d",&n[i].marks);
+                printf("Enter the student grade\n");
+                scanf("%s",n[i].grade);
+                printf("The name of the student is %s\n",n[i].name);
+                printf("The roll number of the student is %s\n",n[i].roll);
+                printf("The department of the student is %s\n",n[i].dept);
+                printf("The marks of the student is %d\n",n[i].marks);
+                printf("The grade of the student is %s\n",n[i].grade);
+                i=i-1;
+        }
+}
