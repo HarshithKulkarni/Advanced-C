@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+
+        struct personal
+        {
+                char name[50];
+                int date;
+                int month;
+                int year;
+                float salary;
+        }person;
+        printf("Enter the name of the person\n");
+        scanf("%s",person.name);
+        printf("Enter the date of joining(dd/mm/yyyy)\n");
+        scanf("%d%d%d",&person.date,&person.month,&person.year);
+        printf("Enter the salary of the person\n");
+        scanf("%f",&person.salary);
+        printf("The name of person is %s\n",person.name);
+        printf("The date of joining is %d-%d-%d\n",person.date,person.month,person.year);
+        printf("The salary of the person is %.2f/-\n",person.salary);
+}
+
