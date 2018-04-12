@@ -1,0 +1,72 @@
+#include<stdio.h>
+#include<stdlib.h>
+int matrixcompute(int a[10][10],int  b[10][10],int r1,int c1,int c2)
+{
+        int i,j,k,pro[10][10];
+        for(i=0;i<r1;++i)
+        {
+                for(j=0;j<c1;++j)
+                {
+                        pro[i][j]=0;
+                }
+        }
+        for(i=0;i<r1;++i)
+        {
+                for(j=0;j<c2;++j)
+                {
+                        for(k=0;k<c1;++k)
+                        {
+                                pro[i][j]+=a[i][k]*b[k][j];
+                        }
+                }
+        }
+        printf("Output matrix is\n");
+        for(i=0;i<r1;++i)
+        {
+                for(j=0;j<c2;++j)
+                {
+                        printf("%d\t",pro[i][j]);
+                }
+                printf("\n");
+        }
+}
+int matrixinput(int r1,int c1,int r2,int c2)
+{
+        int a[10][10],b[10][10],i,j,k;
+        printf("Enter the elements of first matrix\n");
+        for(i=0;i<r1;++i)
+        {
+                for(j=0;j<c1;++j)
+                 {
+                        printf("Enter the element of a%d%d\n",i+1,j+1);
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        printf("Enter the elements of second matrix\n");
+        for(i=0;i<r2;++i)
+        {
+                for(j=0;j<c2;++j)
+                {
+                        printf("Enter the element of b%d%d\n",i+1,j+1);
+                        scanf("%d",&b[i][j]);
+                }
+        }
+        matrixcompute(a,b,r1,c1,c2);
+}
+int main()
+{
+        int r1,c1,r2,c2;
+        printf("Enter the rows and coloumns of first matrix\n");
+        scanf("%d%d",&r1,&c1);
+        printf("Enter the rows and coloumns of second matrix\n");
+        scanf("%d%d",&r2,&c2);
+        while(c1!=r2)
+        {
+                printf("Error!!,coloumns of first matrix not equal to second matrix\n");
+                printf("Enter the rows and coloumns of first matrix\n");
+                scanf("%d%d",&r1,&c1);
+                printf("Enter the rows and coloumns of second matrix\n");
+                scanf("%d%d",&r2,&c2);
+        }
+        matrixinput(r1,c1,r2,c2);
+}
