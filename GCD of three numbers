@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int gcd(int m,int n)
+{
+        int rem;
+        while(n!=0)
+        {
+                rem=m%n;
+                m=n;
+                n=rem;
+        }
+        return m;
+}
+
+int main()
+{
+        int a,b,c,gcd1,gcd2;
+        printf("Enter three positive numbers\n");
+        scanf("%d%d%d",&a,&b,&c);
+        if(a==0 && b==0 && c==0)
+        {
+                printf("Invalid numbers!!\n");
+                printf("Enter three positive numbers\n");
+                scanf("%d%d%d",&a,&b,&c);
+        }
+        gcd1=gcd(a,b);
+        gcd2=gcd(b,a);
+        printf("GCD of the given numbers is %d\n",gcd2);
+}
