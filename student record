@@ -1,18 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
-int main()
+struct student
 {
-        int n,j;
-        printf("Enter the number of students\n");
-        scanf("%d",&j);
-        struct student
-        {
-                char name[15];
-                char roll[20];
-                char dept[20];
-                int marks;
-                char grade[2];
-        }i;
+         char name[15];
+         char roll[20];
+         char dept[20];
+         int marks;
+         char grade[2];
+}i;
+int record(int j)
+{
+        int n;
         for(n=0;n<j;n++)
         {
                 printf("Enter the name of the student\n");
@@ -31,4 +29,11 @@ int main()
                 printf("The marks of the student is %d\n",i.marks);
                 printf("The grade of the student is %s\n",i.grade);
         }
+}
+int main()
+{
+        int j;
+        printf("Enter the number of students\n");
+        scanf("%d",&j);
+        record(j);
 }
