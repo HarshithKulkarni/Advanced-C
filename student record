@@ -1,9 +1,10 @@
 #include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-        int i;
+        int n,j;
         printf("Enter the number of students\n");
-        scanf("%d",&i);
+        scanf("%d",&j);
         struct student
         {
                 char name[15];
@@ -11,24 +12,23 @@ int main()
                 char dept[20];
                 int marks;
                 char grade[2];
-        }n[i];
-        while(i!=0)
+        }i;
+        for(n=0;n<j;n++)
         {
                 printf("Enter the name of the student\n");
-                scanf("%s",n[i].name);
+                scanf("%s",i.name);
                 printf("Enter student's roll number\n");
-                scanf("%s",n[i].roll);
+                scanf("%s",i.roll);
                 printf("Enter the department of the student\n");
-                scanf("%s",n[i].dept);
+                scanf("%s",i.dept);
                 printf("Enter the marks of the student\n");
-                scanf("%d",&n[i].marks);
+                scanf("%d",&i.marks);
                 printf("Enter the student grade\n");
-                scanf("%s",n[i].grade);
-                printf("The name of the student is %s\n",n[i].name);
-                printf("The roll number of the student is %s\n",n[i].roll);
-                printf("The department of the student is %s\n",n[i].dept);
-                printf("The marks of the student is %d\n",n[i].marks);
-                printf("The grade of the student is %s\n",n[i].grade);
-                i=i-1;
+                scanf("%s",i.grade);
+                printf("The name of the student is %s\n",i.name);
+                printf("The roll number of the student is %s\n",i.roll);
+                printf("The department of the student is %s\n",i.dept);
+                printf("The marks of the student is %d\n",i.marks);
+                printf("The grade of the student is %s\n",i.grade);
         }
 }
