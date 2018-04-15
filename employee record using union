@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+union employee
+{
+        struct emp
+        {
+                int number;
+                char name[20];
+                int age;
+                char dept[10];
+                int salary;
+        }o;
+};
+int record(int k)
+{
+        union employee i;
+        int j;
+        for(j=0;j<k;j++)
+        {
+                printf("Enter the number of the employee\n");
+                scanf("%d",&i.o.number);
+                printf("Enter the name of the employee\n");
+                scanf("%s",i.o.name);
+                printf("Enter the age of the employee\n");
+                scanf("%d",&i.o.age);
+                printf("Enter the department of the employee\n");
+                scanf("%s",i.o.dept);
+                printf("Enter the salary of the employee\n");
+                scanf("%d",&i.o.salary);
+                printf("The number of the employee is %d\n",i.o.number);
+                printf("The name of the employee is %s\n",i.o.name);
+                printf("The age of the employee is %d\n",i.o.age);
+                printf("The department of the employee is %s\n",i.o.dept);
+                printf("The salary of the employee is %d\n",i.o.salary);
+                printf("\n\n");
+        }
+}
+int main()
+{
+        int n;
+        printf("Enter the number of employees\n");
+        scanf("%d",&n);
+        record(n);
+}
